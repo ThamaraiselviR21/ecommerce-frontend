@@ -94,7 +94,7 @@ import Home from './pages/Home';
 import Prodetails from './pages/Prodetails';
 import Header from './components/Header';
 import Cart from './pages/Cart';
-import VerifyOTP from './pages/Verifyotp';
+import VerifyOTP from './pages/VerifyOTP';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Fr from './components/Front';
