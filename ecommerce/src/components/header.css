@@ -1,0 +1,12 @@
+@keyframes borderMove {
+    0% { border-color: blue transparent transparent transparent; }
+    25% { border-color: transparent blue transparent transparent; }
+    50% { border-color: transparent transparent blue transparent; }
+    75% { border-color: transparent transparent transparent blue; }
+    100% { border-color: blue transparent transparent transparent; }
+  }
+  
+  .animate-border {
+    animation: borderMove 2s infinite linear;
+  }
+  

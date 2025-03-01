@@ -1,0 +1,112 @@
+.bg{
+    
+   
+    overflow-x: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background:url('../assets/bg.jpeg');
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 90px;
+
+}
+.pic{
+    width: 90px;
+}
+.pics{
+    width: 280px;
+}
+h1{
+    font-family:'Brush Script MT', cursive;
+    color: rgb(223, 6, 132);
+    font-size: xxx-large;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    
+text-shadow: 
+-2px -2px 0 white,  
+ 2px -2px 0 white,  
+-2px  2px 0 black,  
+ 2px  2px 0 black;
+}
+.con1{
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+    padding: 20px;
+}
+.con2{
+    
+    display: flex;
+    justify-content: space-between;
+}
+.picbox{
+    margin: 20px;
+    padding: 20px;
+}
+.con3{
+    display: flex;
+}
+
+.pic{
+    width: 100px;
+    height: 100px;
+   
+    position: relative;
+    animation: moveLeftRight 4s ease-in-out infinite alternate, delayLoop 12s steps(1) infinite;
+  }
+  
+  /* Move left and right */
+  @keyframes moveLeftRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(15px);
+    }
+  }
+  
+  /* Pause animation for 10 seconds every loop */
+  @keyframes delayLoop {
+    0%, 83.33% {
+      animation-timing-function: step-end;
+    }
+    100% {
+      animation-timing-function: step-start;
+    }
+  }
+#pic{
+    margin-top: 80px;
+    width: 80px;
+    margin-left: 20px;
+    
+}
+  .pics{
+
+    margin-top: 10px;
+    margin-right: 80px;
+    animation: zoomInOutLight 3s infinite alternate;
+  }
+  
+  @keyframes zoomInOutLight {
+    0% {
+      transform: scale(1); /* Start at normal size */
+    }
+    50% {
+      transform: scale(1.10); /* Light zoom in */
+    }
+    100% {
+      transform: scale(1); /* Return to normal size */
+    }
+  }
+ .btn {
+   padding: 10px;  
+ }
+ @media screen and (max-width: 768px) {
+  .bg{
+     display: none;
+  }
+}

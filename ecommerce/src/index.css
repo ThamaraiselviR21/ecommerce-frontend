@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes borderMove {
+    0% { background: linear-gradient(90deg, blue 50%, transparent 50%) left / 200% 100%; }
+    50% { background: linear-gradient(90deg, transparent 50%, blue 50%) left / 200% 100%; }
+    100% { background: linear-gradient(90deg, blue 50%, transparent 50%) left / 200% 100%; }
+  }
+  
+  .animate-border {
+    border-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(90deg, blue, cyan) 1;
+    animation: borderMove 2s infinite linear;
+  }
+  
