@@ -12,7 +12,7 @@ function Home() {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const res = await axios.get(`${BASE_URL}product/getpro?`+searchParams);
+                const res = await axios.get(`${BASE_URL}/product/getpro?`+searchParams);
                 setProduct(res.data.products);
             } catch (error) {
                 console.error('Error fetching products:', error);
