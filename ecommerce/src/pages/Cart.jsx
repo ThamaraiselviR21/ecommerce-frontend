@@ -25,7 +25,7 @@ function Cart({cartItems,setCartItems}) {
  async function placeOrderHandler() {
     try {
         const response = await axios.post(
-            `${BASE_URL}order`,
+            `${BASE_URL}/order`,
             cartItems,
             { headers: { 'Content-Type': 'application/json' } }
         );
@@ -49,9 +49,10 @@ function Cart({cartItems,setCartItems}) {
                       <hr />
                      <div className="cart-item">
                     <div className="row">
-                        <div className="col-4 col-lg-3">
-                            <img src={item.product.images[0].image} alt="Laptop" height="90" width="115" />
-                        </div>
+                    <div className="col-4 col-lg-3">
+                            <img src={item.product.image[0]} alt={item.product.name} height="500" width="500" />
+
+                        </div> 
 
                         <div className="col-5 col-lg-3">
                         <Link to ={"/product/"+item.product._id}>{item.product.name}</Link>

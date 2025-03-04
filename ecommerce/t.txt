@@ -12,3 +12,5 @@ useEffect(() => {
 
     fetchProducts();
 }, [searchParams]);
+                        <img src={product.images[0].image} alt={product.name} height="500" width="500" />
+                            <img src={item.product.images[0].image} alt="Laptop" height="90" width="115" />
