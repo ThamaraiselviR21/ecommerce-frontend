@@ -7,11 +7,13 @@ function Productsitems({product}) {
           <div className="card p-3 rounded">
             <img
               className="card-img-top mx-auto"
-              src={
-                product.images && product.images[0]
-                  ? product.images[0].image
-                  : "default-image.jpg" // Replace with your placeholder image URL
-              }
+              src={product.image && product.image.length > 0 ? product.image[0] : "default-image.jpg"}
+
+            //  src={
+                //product.images && product.images[0]
+                //  ? product.images[0].image
+                //  : "default-image.jpg" // Replace with your placeholder image URL
+             // }
             />
             <div className="card-body d-flex flex-column">
               <h5 className="card-title">
