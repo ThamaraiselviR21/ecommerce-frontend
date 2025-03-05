@@ -41,7 +41,7 @@ const Register = ({ onOtpSent }) => {
         >
             <form 
                 onSubmit={handleSubmit} 
-                className="bg-gray-800 p-8 rounded-2xl shadow-xl w-full max-w-md border-2 border-pink-500 transition-all hover:shadow-pink-400"
+                className="bg-gray-800 p-8 rounded-2xl shadow-xl mx-2 w-full max-w-md border-2 border-pink-500 transition-all hover:shadow-pink-400"
             >
                 <h2 className="text-white text-2xl font-bold text-center mb-6">Register</h2>
                 <div className="space-y-4">

@@ -10,7 +10,9 @@ export default function Header({cartItems}) {
   };
   const scrolla = () => {
     document.getElementById('aboutus')?.scrollIntoView({ behavior: 'smooth' });
- }
+  }
+
+
  const scrollc = () => {
   document.getElementById('contactus')?.scrollIntoView({ behavior: 'smooth' });
 }
@@ -76,7 +78,7 @@ const scrollToProducts = () => {
         
       </nav>
     </div>
-    <div className="relative sm:hidden fixed top-0 left-0 bg-gray-900   "> {/* Only visible on small screens */}
+    <div className="fixed top-0 left-0 w-full z-50 sm:hidden bg-gray-900"> {/* Fixed at top */}
     <nav className=" shadow-md p-4">
       {/* Menu Button (Hamburger) */}
       <div className='flex justify-between'>

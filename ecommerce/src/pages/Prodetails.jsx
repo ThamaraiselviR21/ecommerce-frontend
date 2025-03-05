@@ -47,7 +47,7 @@ function Prodetails({cartItems,setCartItems}) {
     }
    
 
-    return ( product && <div className="container container-fluid" >
+    return ( product && <div className="container container-fluid mt-10" >
                 <div className="row f-flex justify-content-around">
                     <div className="col-12 col-lg-5 img-fluid" id="product_image">
                     {product.image && product.image.length > 0 && (

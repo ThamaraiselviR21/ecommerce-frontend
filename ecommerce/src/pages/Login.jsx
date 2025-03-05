@@ -96,7 +96,7 @@ const Login = ({ onLogin = () => {} }) => {  // ✅ Fix: Default function to pre
     >
         <form 
             onSubmit={handleSubmit} 
-            className="bg-gray-800 p-8 rounded-2xl shadow-xl w-full max-w-md border-2 border-pink-500 transition-all hover:shadow-pink-400"
+            className="bg-gray-800 p-8 rounded-2xl shadow-xl w-full mx-2  max-w-md border-2 border-pink-500 transition-all hover:shadow-pink-400"
         >
             <h2 className="text-white text-2xl font-bold text-center mb-6">Login</h2>
             {errorMessage && <p className="text-red-500 text-center mb-4">{errorMessage}</p>}

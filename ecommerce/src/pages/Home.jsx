@@ -26,7 +26,7 @@ function Home() {
   return (
     <>
     <Front/>
-    <h1 id="products_heading" style={{textAlign:"center"}}>Explore Our Products</h1>
+    <h1 id="products_heading" className="" style={{textAlign:"center"}}>Explore Our Products</h1>
     
     <section id="products" className="container mt-5" >
       <div className="row" >
