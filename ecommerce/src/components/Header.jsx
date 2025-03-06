@@ -1,9 +1,28 @@
 import { Link } from 'react-router-dom'
 import Search from './Search'
-import { useState } from 'react';
+import { useState,useRef,useEffect } from 'react';
 import './header.css'
 export default function Header({cartItems}) {
   const [isOpen, setIsOpen] = useState(false);
+  const cartIconRef=useRef();
+  const cartIcon=useRef();
+
+  useEffect(()=>{
+    if(cartItems.length>0){
+      cartIconRef.current.classList.add('cart-glow');
+      setTimeout(()=>{
+        cartIconRef.current.classList.remove('cart-glow')
+      },800)
+    }
+  },[cartItems.length])
+  useEffect(()=>{
+    if(cartItems.length>0){
+      cartIcon.current.classList.add('cart-glowing');
+      setTimeout(()=>{
+        cartIcon.current.classList.remove('cart-glowing')
+      },800)
+    }
+  },[cartItems.length])
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -58,10 +77,10 @@ const scrollToProducts = () => {
           <Search className="w-full border-2 border-pink-400  rounded-lg outline-none focus:ring-2 focus:ring-pink-500 transition duration-300" />
         </div> 
          {/* Cart Link */}
-         <div className="mt-4 md:mt-0">
-        <Link to="/cart" className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
-          <i className="fa-solid fa-cart-shopping"></i>
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cartItems.length}</span>
+         <div className="mt-4 md:mt-0 ">
+         <Link to="/cart" ref={cartIcon} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
+         <i className="fa-solid fa-cart-shopping"></i>
+            <span className=" text-white position-absolute top-0 start-100 translate-middle badge rounded bg-info">{cartItems.length}</span>
           </Link>
         </div>
         <div className="mt-4 md:mt-0">
@@ -86,9 +105,9 @@ const scrollToProducts = () => {
          <i className="fa-solid fa-bars text-pink-500 " ></i>
          </div>
           <div className=" md:mt-0">
-          <Link to="/cart" className="btn p-2 position-relative border-2 border-pink-500 bg-pink-300 ">
+          <Link to="/cart" ref={cartIconRef} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
           <i className="fa-solid fa-cart-shopping"></i>
-            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{cartItems.length}</span>
+            <span className=" text-white position-absolute top-0 start-100  translate-middle badge rounded bg-info">{cartItems.length}</span>
           </Link>
         </div>
       </div>

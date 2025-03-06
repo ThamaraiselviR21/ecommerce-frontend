@@ -9,4 +9,28 @@
   .animate-border {
     animation: borderMove 2s infinite linear;
   }
+  @keyframes cartGlow {
+    0% {
+      box-shadow: 0 0 10px 5px rgba(255, 0, 128, 0.9);
+      transform: scale(1);
+    }
+    50% {
+      box-shadow: 0 0 30px 15px rgba(255, 0, 128, 1);
+      transform: scale(1.2);
+    }
+    100% {
+      box-shadow: 0 0 10px 5px rgba(255, 0, 128, 0.9);
+      transform: scale(1);
+    }
+    }
   
+  
+  .cart-glow {
+    animation: cartGlow 1.2s ease-in-out;
+    color: #ff0080;
+  
+  }
+  .cart-glowing{
+    animation: cartGlow 1.2s ease-in-out;
+    color: #ff0080;
+  }

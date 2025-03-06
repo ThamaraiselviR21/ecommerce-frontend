@@ -8,14 +8,17 @@ const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 function Home() {
 
     const [product, setProduct] = useState([]);
-    const [searchParams,setSearchParams]= useSearchParams()
+    const [searchParams,setSearchParams]= useSearchParams();
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const fetchProducts = async () => {
             try {
                 const res = await axios.get(`${BASE_URL}/product/getpro?`+searchParams);
                 setProduct(res.data.products);
+                setLoading(false);  
             } catch (error) {
                 console.error('Error fetching products:', error);
+                setLoading(false);  
             }
         };
     
@@ -29,11 +32,15 @@ function Home() {
     <h1 id="products_heading" className="" style={{textAlign:"center"}}>Explore Our Products</h1>
     
     <section id="products" className="container mt-5" >
+    {loading ? (  
+    <h2 className="text-pink-700 italic text-center text-3xl border-2 border-gray-900 p-5" style={{ textAlign: "center" }}>Loading...</h2>  
+  ) : (  
       <div className="row" >
      {product.map((product, index) => (
   <Productsitems key={index} product={product} />
     ))}
    </div>
+  )}
     </section>
     <div className="bg-gray-500 rounded-2xl m-2"id="aboutus"  >
       <h1 className="text-center p-2" >About Us</h1>
