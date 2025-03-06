@@ -122,6 +122,9 @@ const scrollToProducts = () => {
 
         {/* Menu Items */}
         <ul className="flex flex-col space-y-4 mt-10 text-lg ">
+          <div>
+          <img className="w-28 ml-3.5" src="/images/l1 (2).png" alt="Logo" />
+          </div>
           <li onClick={scrollToProducts}><a  className="block px-4 py-2 hover:bg-gray-100">Home</a></li>
           <li onClick={scrolla}><a  className="block px-4 py-2 hover:bg-gray-100">About us</a></li>
           <li onClick={scrollc}><a  className="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
