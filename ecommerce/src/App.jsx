@@ -99,6 +99,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Fr from './components/Front';
 import Productsitems from './components/Productsitems';
+import MyOrders from './pages/MyOrders';
 
 function App() {
   const [token, setToken] = useState('');
@@ -128,6 +129,7 @@ function App() {
               <Route path="/search" element={<Home />} />
               <Route path="/product/:id" element={<Prodetails cartItems={cartItems} setCartItems={setCartItems} />} />
               <Route path="/cart" element={<Cart cartItems={cartItems} setCartItems={setCartItems} />} />
+              {/*<Route path='/my-orders' element={<MyOrders/>}/>*/}
             </>
           )}
 

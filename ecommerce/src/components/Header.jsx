@@ -77,21 +77,32 @@ const scrollToProducts = () => {
           <Search className="w-full border-2 border-pink-400  rounded-lg outline-none focus:ring-2 focus:ring-pink-500 transition duration-300" />
         </div> 
          {/* Cart Link */}
-         <div className="mt-4 md:mt-0 ">
-         <Link to="/cart" ref={cartIcon} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
-         <i className="fa-solid fa-cart-shopping"></i>
-            <span className=" text-white position-absolute top-0 start-100 translate-middle badge rounded bg-info">{cartItems.length}</span>
+         <div className="mt-4 md:mt-0 hover:bg-gray-100 ">
+         <Link to="/home" ref={cartIcon} className=" btn p-2 position-relative border-2 border-pink-500 bg-white ">
+         <i className="fa-solid fa-home"></i>
           </Link>
         </div>
-        <div className="mt-4 md:mt-0">
+       
+       {/* <div className='mt-4 md:mt-0'>
+        <Link to="/my-orders" className="btn border-2 border-pink-500 bg-white p-2">
+          <i className="fa-solid fa-box"></i> My Orders
+         </Link>
+         </div>*/}
+        <div className="mt-4 md:mt-0 hover:bg-gray-100">
         <button onClick={scrollc} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
         <i className="fa-solid fa-phone-volume"></i>
           </button>
         </div>
-        <div className="mt-4 md:mt-0">
+        <div className="mt-4 md:mt-0 hover:bg-gray-100">
         <button onClick={scrolla} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
         <i className="fa-solid fa-users"></i>
           </button>
+        </div>
+        <div className="mt-4 md:mt-0 hover:bg-gray-100">
+         <Link to="/cart" ref={cartIcon} className="btn p-2 position-relative border-2 border-pink-500 bg-white ">
+         <i className="fa-solid fa-cart-shopping"></i>
+            <span className=" text-white position-absolute top-0 start-100 translate-middle badge rounded bg-info">{cartItems.length}</span>
+          </Link>
         </div>
         
         
@@ -125,7 +136,7 @@ const scrollToProducts = () => {
           <div>
           <img className="w-28 ml-3.5" src="/images/l1 (2).png" alt="Logo" />
           </div>
-          <li onClick={scrollToProducts}><a  className="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+          <Link to='/home'><a  className="block px-4 py-2 hover:bg-gray-100">Home</a></Link>
           <li onClick={scrolla}><a  className="block px-4 py-2 hover:bg-gray-100">About us</a></li>
           <li onClick={scrollc}><a  className="block px-4 py-2 hover:bg-gray-100">Contact</a></li>
         </ul>
